@@ -1917,6 +1917,421 @@
     .rt-prestgious-property-button-wrapper{ transform: translateY(-80px); position:relative; z-index:20; }
 
 
+    /* =============================================
+       MOBILE RESPONSIVE OVERRIDES
+       ============================================= */
+
+    /* --- TABLET (max-width: 991px) --- */
+    @media screen and (max-width: 991px) {
+
+      /* Mega menu: override inline width on tablet */
+      .rt-nav-dropdown-list.rt-mega-menu {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+      }
+
+      /* Mega menu wrapper: stack vertically on tablet */
+      .rt-nav-dropdown-wrapper {
+        flex-direction: column !important;
+        gap: 0 !important;
+      }
+
+      /* Drop-down left: show full width, override inline styles + Webflow hide */
+      .rt-drop-down-left {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 4px 8px !important;
+        padding: 10px !important;
+        border-top: none !important;
+        border-bottom: none !important;
+        flex-direction: row !important;
+      }
+
+      /* Dropdown right: full width */
+      .rt-dropdown-right {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 200px !important;
+      }
+
+      /* Logos grid: adapt to available space */
+      .rt-mega-logos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 16px !important;
+      }
+
+      .rt-mega-logos-grid .logo-cell {
+        height: 60px !important;
+      }
+
+      /* Preview box adjustments */
+      .rt-mega-preview-logo {
+        max-height: 80px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+      }
+
+      .subsidiary-desc {
+        font-size: 11px !important;
+        padding: 0 8px !important;
+        padding-bottom: 12px !important;
+      }
+
+      /* Prestigious property: reset transforms */
+      .rt-prestigious-property-main-image-wrapper {
+        transform: none !important;
+      }
+
+      .rt-prestigious-property-text-wrapper {
+        margin-top: 0 !important;
+      }
+
+      .rt-prestgious-property-button-wrapper {
+        transform: none !important;
+      }
+
+      .rt-prestigious-property {
+        padding-top: 60px !important;
+      }
+
+      /* Key location cards: make flexible */
+      .rt-key-card-one,
+      .rt-key-card-two,
+      .rt-key-card-three,
+      .rt-key-card-four {
+        flex: 1 1 180px !important;
+      }
+    }
+
+    /* --- LANDSCAPE MOBILE (max-width: 767px) --- */
+    @media screen and (max-width: 767px) {
+
+      /* General overflow prevention */
+      body {
+        overflow-x: hidden !important;
+      }
+
+      /* Navbar brand: smaller on mobile */
+      .rt-brand {
+        height: 50px !important;
+      }
+
+      /* Mega menu: full width, stacked layout */
+      .rt-nav-dropdown-list.rt-mega-menu {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+      }
+
+      /* Drop-down left: horizontal scroll of items */
+      .rt-drop-down-left {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex-wrap: wrap !important;
+        gap: 2px 6px !important;
+        padding: 8px !important;
+        border: none !important;
+      }
+
+      .rt-drop-down-left .rt-text-medium {
+        font-size: 12px !important;
+        padding: 4px 6px !important;
+        white-space: nowrap !important;
+      }
+
+      .rt-drop-down-left .rt-small {
+        font-size: 11px !important;
+      }
+
+      /* Dropdown right: stack below the items */
+      .rt-dropdown-right {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 180px !important;
+      }
+
+      /* Logos grid: 2 columns on mobile */
+      .rt-mega-logos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        padding: 12px !important;
+      }
+
+      .rt-mega-logos-grid .logo-cell {
+        height: 50px !important;
+        padding: 6px !important;
+      }
+
+      /* Reduce zoom on grid logos for mobile */
+      .logo-cell.zoom-a img { transform: scale(2) !important; }
+      .logo-cell.zoom-b img { transform: scale(1.3) !important; }
+      .logo-cell.zoom-c img { transform: scale(1.5) !important; }
+      .logo-cell.zoom-d img { transform: scale(1.2) !important; }
+
+      /* Preview box on mobile */
+      .rt-mega-preview-logo {
+        max-height: 70px !important;
+        max-width: 180px !important;
+        margin-top: 16px !important;
+        margin-bottom: 16px !important;
+      }
+
+      .rt-mega-preview-inner {
+        padding: 12px 16px !important;
+      }
+
+      .subsidiary-desc {
+        font-size: 10.5px !important;
+        line-height: 1.4 !important;
+        padding: 0 6px !important;
+        padding-bottom: 10px !important;
+        max-width: 100% !important;
+      }
+
+      /* Hero section: mobile sizing */
+      .rt-hero-v1-text-alignment {
+        justify-content: center !important;
+      }
+
+      .rt-hero-v1-heading {
+        font-size: 26px !important;
+        text-align: center !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+      }
+
+      .rt-hero-v1-text-wrapper .rt-overflow-hidden {
+        text-align: center !important;
+        padding-right: 0 !important;
+      }
+
+      /* Counter section: single column grid on mobile */
+      .rt-position-relative.rt-counter-wrapper {
+        grid-template-columns: 1fr !important;
+      }
+
+      .rt-counter-text {
+        max-width: 100% !important;
+      }
+
+      /* Feature/Pillar section: stack vertically */
+      .rt-feature-wrapper {
+        flex-direction: column !important;
+      }
+
+      .rt-feature-left-part,
+      .rt-feature-right-part {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* Prestigious property/sectors: reset transforms */
+      .rt-prestigious-property-main-image-wrapper {
+        transform: none !important;
+      }
+
+      .rt-prestigious-property-text-wrapper {
+        margin-top: 0 !important;
+        margin-bottom: 30px !important;
+      }
+
+      .rt-prestgious-property-button-wrapper {
+        transform: none !important;
+      }
+
+      .rt-prestigious-property {
+        padding-top: 40px !important;
+        margin-top: 0 !important;
+      }
+
+      /* Key location cards: stack into 2 columns */
+      .rt-key-card-one,
+      .rt-key-card-two,
+      .rt-key-card-three,
+      .rt-key-card-four {
+        flex: 1 1 calc(50% - 10px) !important;
+        min-width: 0 !important;
+      }
+
+      .rt-key-location-image-wrapper {
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+      }
+
+      /* Footer: 1 column on mobile */
+      .rt-footer-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+
+      /* Explore dropdown: single column */
+      .rt-explore-dropdown-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      /* Sold properties wrapper: single column */
+      .rt-sold-propertise-wrapper {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Contact button wrapper fix */
+      .rt-button-wrapper .rt-button-text span {
+        font-size: 13px !important;
+      }
+    }
+
+    /* --- SMALL MOBILE (max-width: 479px) --- */
+    @media screen and (max-width: 479px) {
+
+      /* Ensure no horizontal overflow */
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+      }
+
+      /* Navbar: compact */
+      .rt-navbar-wrapper {
+        padding: 4px 0 !important;
+      }
+
+      .rt-brand {
+        height: 40px !important;
+      }
+
+      /* Hero: more compact */
+      .rt-hero-v1-heading {
+        font-size: 22px !important;
+        line-height: 1.25 !important;
+      }
+
+      /* Mega menu: simplified view */
+      .rt-drop-down-left {
+        padding: 6px !important;
+        gap: 2px 4px !important;
+      }
+
+      .rt-drop-down-left .rt-text-medium {
+        font-size: 11px !important;
+        padding: 3px 5px !important;
+      }
+
+      .rt-mega-logos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px !important;
+        padding: 8px !important;
+      }
+
+      .rt-mega-logos-grid .logo-cell {
+        height: 42px !important;
+        padding: 4px !important;
+      }
+
+      /* Reduce zoom further on small mobile */
+      .logo-cell.zoom-a img { transform: scale(1.6) !important; }
+      .logo-cell.zoom-b img { transform: scale(1.1) !important; }
+      .logo-cell.zoom-c img { transform: scale(1.3) !important; }
+      .logo-cell.zoom-d img { transform: scale(1.1) !important; }
+
+      .rt-mega-preview-logo {
+        max-height: 55px !important;
+        max-width: 150px !important;
+        margin-top: 12px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .subsidiary-desc {
+        font-size: 10px !important;
+        line-height: 1.35 !important;
+      }
+
+      /* Counter section: single column */
+      .rt-position-relative.rt-counter-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+
+      .rt-counter-v1-box-wrapper {
+        justify-content: center !important;
+      }
+
+      .rt-counter-subtext-wrapper {
+        text-align: center !important;
+      }
+
+      /* Prestigious property: proper spacing */
+      .rt-prestigious-property {
+        padding-top: 30px !important;
+      }
+
+      .rt-prestigious-property-text-wrapper {
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+      }
+
+      /* Key location cards: single column */
+      .rt-key-card-one,
+      .rt-key-card-two,
+      .rt-key-card-three,
+      .rt-key-card-four {
+        flex: 1 1 100% !important;
+      }
+
+      /* Footer: proper stacking */
+      .rt-footer-wrapper {
+        grid-template-columns: 1fr !important;
+      }
+
+      .rt-footer-bottom-text-wrapper {
+        text-align: center !important;
+        font-size: 12px !important;
+      }
+
+      /* Blog cards: single column */
+      .rt-blog-card-item-wrapper {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Sold properties: single column */
+      .rt-sold-propertise-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+      }
+
+      /* Feature v3 grid: single column */
+      .rt-feature-v3-wrapper {
+        grid-template-columns: 1fr !important;
+      }
+
+      .rt-feature-v3-wrapper.rt-overflow-hidden {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Explore v1 grid */
+      .rt-explore-v1 {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Unique card wrapper */
+      .rt-unique-card-wrapper {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Section padding reduction */
+      .rt-counter-v1,
+      .rt-feature,
+      .rt-prestigious-property,
+      .rt-journey {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+    }
 
 
 
