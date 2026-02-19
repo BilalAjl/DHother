@@ -2,18 +2,21 @@
 
 import fs from "fs";
 import path from "path";
-import { sanity } from "@/lib/sanity.client";
 
-
+function extractBodyContent(html: string): string {
+  // Extract content between <body> and </body> tags
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+  return bodyMatch ? bodyMatch[1] : html;
+}
 
 export default async function HomePage() {
-  // 1) Charger ton fichier HTML Webflow
   const filePath = path.join(process.cwd(), "public", "home-one.html");
-  let html = fs.readFileSync(filePath, "utf8");
+  const html = fs.readFileSync(filePath, "utf8");
+  const bodyContent = extractBodyContent(html);
 
   return (
     <div
-      dangerouslySetInnerHTML={{ __html: html }}
+      dangerouslySetInnerHTML={{ __html: bodyContent }}
       suppressHydrationWarning
     />
   );

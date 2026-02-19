@@ -29,6 +29,17 @@ export default function RootLayout({
           rel="stylesheet"
           href="/css/detroit-holding-website-d68318.webflow.css"
         />
+        {/* Webflow fonts */}
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+          href="https://fonts.gstatic.com"
+          rel="preconnect"
+          crossOrigin="anonymous"
+        />
+        <script
+          src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+          defer
+        />
       </head>
       <body>{children}</body>
     </html>
