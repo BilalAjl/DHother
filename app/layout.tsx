@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
+      className="w-mod-js w-mod-ix"
       data-wf-page="6932f6b52d7fb427d6a9b161"
       data-wf-site="6932f6b32d7fb427d6a9b013"
       suppressHydrationWarning
